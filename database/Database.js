@@ -3,8 +3,8 @@ export  function connectDataBase() {
   try {
     mongoose.connect(process.env.MONGO_URI, {
       dbName: "backend",
-    }).then(()=>{
-        console.log("connected with database")
+    }).then((c)=>{
+        console.log(`database connected with ${c.connection.host}`)
     })
     
   } catch (error) {
